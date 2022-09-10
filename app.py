@@ -75,7 +75,7 @@ def recommend():
             results = results+"\n"
 
         # Render them in the webpage 
-        return render_template('index.html', items_list='Top 5 recommendations are:\n\n {0}'.format(results))
+        return render_template('index.html', items_list='Top 5 recommendations for \'{0}\' are:\n\n {1}'.format(username,results))
 
     except Exception:
         return render_template('index.html', items_list='Username {0} does not exist.\n'.format(username))
